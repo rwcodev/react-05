@@ -1,0 +1,81 @@
+.poke {
+    width: 100%;
+    max-width: 20em;
+    border: 0.4 em solid #aaa;
+    border-radius: 0.8em;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 100ms ease;
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+.poke__header {
+    background-color: #777;
+    width: 100%;
+    aspect-ratio: 1.8;
+    position: relative;
+    margin-bottom: 4em;
+}
+.poke__sprite {
+    position: absolute;
+    width: 70%;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.poke__body {
+    padding: 0 1em 2em;
+}
+.poke__name {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 0.1em;
+}
+.poke__types {
+    --gap: 0.8em
+    display: flex;
+    justify-content: center;
+    gap: var(--gap);
+}
+.poke__types__item {
+    display: flex;
+    gap: var(--gap);
+    &:nth-child(2)::before {
+        content: '/';
+        color:#aaa;
+    }
+}
+.poke__hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-color: #7771;
+}
+.poke__stats {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 1em 0.2em;
+}
+.poke__stats_item {
+    display: grid;
+    gap: 0.2em;
+    justify-content: center;
+}
+.poke__stats__label {
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+.poke__stats__value {
+    font-size: 1.1em;
+}
+
+.bg__grass {
+    background: linear-gradient(178.92deg, #7EC6E5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%) 
+}
+.bg__fire{
+    background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%) 
+}
+.bg__water{
+    background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%) 
+}
+/* Borders color */
